@@ -3,6 +3,7 @@ dnf module enable nodejs:18 -y
 
 dnf install nodejs -y
 
+cp backend.service /etc/systemd/system/backend.service
 
 useradd expense
 rm -rf /app
@@ -12,9 +13,6 @@ cd /app
 unzip /tmp/backend.zip
 npm install
 
-cd
-cp backend.service /etc/systemd/system/backend.service
-cd
 
 
 systemctl daemon-reload
