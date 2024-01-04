@@ -18,10 +18,11 @@ npm install
 systemctl daemon-reload
 
 dnf install mysql -y
-mysql -h 172.31.32.119 -uroot -pExpenseApp@1 < /app/schema/backend.sql
+mysql -h mysql.adevops96.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
 
 systemctl enable backend
 systemctl restart backend
+
 
 
 
